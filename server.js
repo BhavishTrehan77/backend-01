@@ -18,22 +18,9 @@ async function connectdb(){
     console.log("connection done")
 }
 connectdb()
-const validation=[
-    body("email").isEmail().withMessage("enter an valid email address").custom((async(email)=>{
-        const exist=await User.findOne({email})
-        if(exist){
-            throw new Error("email already exist")
-        }
-    })),
-    body("password").isLength({min:8}).withMessage("enter an valid password"),
-    body("confirmPassword").custom(value,{req}{
-        
-        
-    })
 
-]
 
-app.use("/api/v1/result",validation,router)
+app.use("/api/v1/result",router)
 
 app.get("/api/data",authentification,authorization,async(req,resp)=>{
     resp.json({

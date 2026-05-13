@@ -22,13 +22,7 @@ const getingData=async(req)=>{
     }
 }
 const postingData=async(req,Data)=>{
-    if(!Data.name||!Data.email||!Data.password){
-         
-        const errors=validationResult(req)
-        if(!errors.isEmpty()){
-            throw new Error("enter valid credentials")
-        }
-    }
+   
     
     return User.create(Data)
 }

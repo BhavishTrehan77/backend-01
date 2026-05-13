@@ -1,7 +1,6 @@
 const User = require("../models/user.model")
 const bcrypt=require("bcrypt")
 const crypto=require("crypto")
-const { validationResult } = require("express-validator")
 const jwt=require("jsonwebtoken")
 const getingData=async(req)=>{
     const{cursor,limit=5}=req.query

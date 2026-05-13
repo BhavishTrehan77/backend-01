@@ -14,7 +14,7 @@ app.use(express.json())
 
 
 async function connectdb(){
-    await mongoose.connect("mongodb://localhost:27017/bhtdinbad")
+    await mongoose.connect("mongodb+srv://beatHubUser:Guruji%40707@beathubuser.yi1fp0a.mongodb.net/merimrji")
     console.log("connection done")
 }
 connectdb()

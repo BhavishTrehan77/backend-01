@@ -1,6 +1,5 @@
 const mongoose=require('mongoose')
 const bcrypt=require("bcrypt") 
-const { resetPassword } = require('../services/user.services')
 const Schemadata=new mongoose.Schema({
     name:{
         type:String
